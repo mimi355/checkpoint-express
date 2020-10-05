@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Contact-us</title>
+  </head>
+
+  <body class="text-center">
+    <header>
+      <%- include('./partials/nav.ejs') %>
+    </header>
+      <form class="form-signin" action="/contact" method="post">
+        <img
+          class="mb-4 myimg"
+          src="/images/email.png"
+          alt=""
+          width="100"
+          height="100"
+        />
+        <h1 class="h3 mb-3 font-weight-normal">Contact-Us</h1>
+        <input
+          name="fName"
+          type="text"
+          class="form-control top"
+          placeholder="First Name"
+          required
+          autofocus
+        />
+        <input
+          name="lName"
+          type="text"
+          class="form-control middle"
+          placeholder="Last Name"
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          class="form-control bottom"
+          placeholder="Email"
+          required
+        />
+        <textarea class="form-control" rows="3"> </textarea>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Send
+        </button>
+        <p class="mt-5 mb-3 text-muted">Copyright@2020</p>
+      </form>
+    
+  </body>
+</html>
